@@ -1,0 +1,62 @@
+version: 1
+project:
+  title: >-
+    Reproducibility Study for a Computational Model of the Neurovascular
+    Coupling Unit
+  authors:
+    - name: Sergio Dempsey
+      orcid: 0000-0003-1738-3047
+      affiliations:
+        - Auckland Bioengineering Institute, University of Auckland, New Zealand
+    - name: Gunnar Cedersund
+      orcid: 0000-0001-9386-0568
+      affiliations:
+        - >-
+          Department of Biomedical Engineering, Linköping University, Linköping,
+          Sweden
+    - name: Maria Engström
+      orcid: 0000-0002-7221-3430
+      affiliations:
+        - >-
+          Department of Health, Medicine and Caring Sciences, Linköping
+          University, Linköping, Sweden
+        - >-
+          Center for Medical Image Science and Visualization, Linköping
+          University, Linköping, Sweden
+    - name: Gonzalo Maso Talou
+      orcid: 0000-0002-5208-992X
+      affiliations:
+        - Auckland Bioengineering Institute, University of Auckland, New Zealand
+    - name: Soroush Safaei
+      orcid: 0000-0001-5734-243X
+      affiliations:
+        - Auckland Bioengineering Institute, University of Auckland, New Zealand
+      corresponding: true
+      email: soroush.safaei@auckland.ac.nz
+  keywords:
+    - CellML
+    - neurovascular coupling
+    - anaesthesia
+    - reproducibility
+  open_access: true
+  license: CC-BY-4.0
+  subject: Original
+  date: 2023/01/11
+  doi: https://doi.org/10.36903/physiome.21714863
+site:
+  title: >-
+    Reproducibility Study for a Computational Model of the Neurovascular
+    Coupling Unit
+  projects:
+    - slug: S000020
+      path: .
+  nav: []
+  actions:
+    - title: paper
+      url: Dempsey2022PhysiomeS000020.pdf
+      static: true
+    - title: omex
+      url: Dempsey2022PhysiomeS000020.omex
+      static: true
+    - title: primary
+      url: https://doi.org/10.1016/j.neuroimage.2020.116827
