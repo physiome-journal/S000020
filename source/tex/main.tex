@@ -61,7 +61,7 @@ The model contains a total of $13$ coupled ODEs based on mass-action, or Michael
 
 \subsection{CellML Model}
 
-The structure of the model is built following recommended CellML best practises (see Figure~\ref{fig:1}). This includes modularisation of the pyramidal, GABAergic NO and GABAergic NPY neuronal signalling pathways for best combined prediction or separate use. Best practises also encourage the separation of model mathematics and parameters so that one model can handle various parameter sets. For this model, the parameters simulate different neuronal dynamics. Examples that will impact neuronal dynamics include the type of stimulation, the conditions of the experiment (anaesthesia), and the genetic modulation that manifests itself as coefficient modification. We have achieved these criteria, as well as reduced the number of input parameters by including a toggle for anaesthesia versus awake conditions in our parameter files. This is a benefit compared to the five separate models required in the primary publication. This simplification also reduces the toll of scripts, allowing users to run different scenarios by only altering the set of parameters. To reproduce all results, only six parameters in the parameters file need to be modified. These six parameters define the start and stop times for stimulation, whether the unit is ``awake'' or ``anaesthetised'', and finally the stimulation scaling constants are discussed in detail in the primary publication.
+The structure of the model is built following recommended CellML best practises (see \autoref{fig:1}). This includes modularisation of the pyramidal, GABAergic NO and GABAergic NPY neuronal signalling pathways for best combined prediction or separate use. Best practises also encourage the separation of model mathematics and parameters so that one model can handle various parameter sets. For this model, the parameters simulate different neuronal dynamics. Examples that will impact neuronal dynamics include the type of stimulation, the conditions of the experiment (anaesthesia), and the genetic modulation that manifests itself as coefficient modification. We have achieved these criteria, as well as reduced the number of input parameters by including a toggle for anaesthesia versus awake conditions in our parameter files. This is a benefit compared to the five separate models required in the primary publication. This simplification also reduces the toll of scripts, allowing users to run different scenarios by only altering the set of parameters. To reproduce all results, only six parameters in the parameters file need to be modified. These six parameters define the start and stop times for stimulation, whether the unit is ``awake'' or ``anaesthetised'', and finally the stimulation scaling constants are discussed in detail in the primary publication.
 
 The CellML model was executed with the optimised rate constants and other parameters tabulated in the supplementary material of the primary publication. These values are rounded from what was optimised in the original code; differences if any, will be discussed in the results. The CellML model is initialised using steady-state values from its own simulation run for $500$ seconds and not from the tabulated in the supplementary material. This accounts for any steady-state result errors that may have been caused by rounding. Again, the differences will be discussed in the results.
 
@@ -112,7 +112,7 @@ Finally, to reproduce the plot data in Figure $6$ of the primary publication, th
 
 \section{Model Execution}
 
-The results were generated using the 2022-05-31 snapshot of OpenCOR \citep{Garny2015} and MATLAB R2021a to produce the plots \citep{MATLABR2021a}. The MATLAB code requires software newer than R2019b. The entire code is available at \url{https://models.physiomeproject.org/workspace/8a2}. To generate results, follow this step-wise procedure for each parameter set named in Table \ref{table:2}. 
+The results were generated using the 2022-05-31 snapshot of OpenCOR \citep{Garny2015} and MATLAB R2021a to produce the plots \citep{MATLABR2021a}. The MATLAB code requires software newer than R2019b. The entire code is available at \url{https://models.physiomeproject.org/workspace/8a2}. To generate results, follow this step-wise procedure for each parameter set named in \autoref{table:2}. 
 
 \begin{table}[htb]
 \begin{center}
@@ -134,7 +134,7 @@ The results were generated using the 2022-05-31 snapshot of OpenCOR \citep{Garny
 \end{table}
 
 \subsection{Step1: Load parameters} 
-Open sten2020\_NVC\_main.cellml and on line $24$ alter the parameter name to any of the tags (\%\%) in Table \ref{table:2}. All parameter filenames are in the same location as the main function and follow the naming of the figure to be reproduced from the primary publication.
+Open sten2020\_NVC\_main.cellml and on line $24$ alter the parameter name to any of the tags (\%\%) in \autoref{table:2}. All parameter filenames are in the same location as the main function and follow the naming of the figure to be reproduced from the primary publication.
 \subsection{Step2: Simulation Parameters} 
 The equations were solved using the CVODE solver with a maximum timestep-size equal to $0.01$. The model is already initialised in steady state. All run times are $50$ seconds with a timestep of $0.01$ seconds. 
 
@@ -142,36 +142,36 @@ The equations were solved using the CVODE solver with a maximum timestep-size eq
 When the simulation is complete, export all the data to .csv. Use the default name sten2020\_NVC\_main\_data.csv but amend the parameter case (\%\%) to the end as shown sten2020\_NVC\_main\_data\_\verb|%%|.csv. Place each csv file into an <Output CSVs> folder in the workspace. This is filled with the results by default. 
 
 \subsection{Step4: Generate Plots} 
-To reproduce the figures, run the chosen Matlab function in the folder <MatlabFiles> from within its directory. The name of the script corresponds to the figure it produces; for example, running Figure3.m will produce Figure $3$ in the primary publication. 
+To reproduce the figures, run the chosen Matlab function in the folder <MatlabFiles> from within its directory. The name of the script corresponds to the figure it produces; for example, running \texttt{Figure3.m} will produce Figure $3$ in the primary publication. 
 
 \section{Model Results}
 
 Starting with steady-state values, only $3$ values were not identical to those published in the supplementary material of the primary publication. The steady-state values for arachidonic acid, NO, and NO$_\mathrm{vsm}$ were $6.224$, $2944.421$, and $352.127$ in the CellML model and $6.226$, $2944.636$, and $352.139$ in the primary publication; all differences are less than $0.01$\%. This led us to conclude that using the rounded numbers was safe to continue with figure reproduction.
 
-The first figure reproduced is Figure $3$ of the primary publication shown in Figure~\ref{fig:2}. In this figure, the results of arterial dilation are shown for $5$ different stimulus cases. The parameters used to produce this graph come from the best-fit parameters in the primary publication. All subplots agree with the primary publication. 
+The first figure reproduced is Figure $3$ of the primary publication shown in \autoref{fig:2}. In this figure, the results of arterial dilation are shown for $5$ different stimulus cases. The parameters used to produce this graph come from the best-fit parameters in the primary publication. All subplots agree with the primary publication. 
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[scale=0.7,keepaspectratio]{Figure3.png}
-    \caption{Best estimated model simulation of arteriolar dilation to sensory or optogenetic stimulation in awake and anesthetised mice. This figure matches the subfigures B-D-F-H-J of Figure $3$ in the primary publication and can be reproduced using Figure3.m file.}
+    \caption{Best estimated model simulation of arteriolar dilation to sensory or optogenetic stimulation in awake and anesthetised mice. This figure matches the subfigures B-D-F-H-J of Figure $3$ in the primary publication and can be reproduced using \texttt{Figure3.m} file.}
     \label{fig:2}
 \end{figure}
 
-The second figure reproduced is Figure $5$ of the primary publication shown in Figure~\ref{fig:3}. This figure emphasises the impact of using Michaelis-Menten kinetics for the production of NPY in vascular smooth muscle (vsm). All subplots agree with the primary publication. 
+The second figure reproduced is Figure $5$ of the primary publication shown in \autoref{fig:3}. This figure emphasises the impact of using Michaelis-Menten kinetics for the production of NPY in vascular smooth muscle (vsm). All subplots agree with the primary publication. 
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[scale=0.8, keepaspectratio]{Figure5.png}
-    \caption{NPY response from optogenetic stimulation of GABAergic interneurons in awake and anesthetised mice. (top left) Change in NPY from baseline steady state for awake and anesthetised optogenetic GABAergic stimulation. (top right) Change in rate of NPY$_\mathrm{vsm}$ production as a function of NPY produced from baseline showing minor changes in rate for large increases in production in anesthetised vs awake conditions. (bottom) Change in NPY$_\mathrm{vsm}$ over time for anesthetised and awake stimulation. This figure matches the subfigures B-C-D of Figure $5$ in the primary publication and can be reproduced using Figure5.m file.}
+    \caption{NPY response from optogenetic stimulation of GABAergic interneurons in awake and anesthetised mice. (top left) Change in NPY from baseline steady state for awake and anesthetised optogenetic GABAergic stimulation. (top right) Change in rate of NPY$_\mathrm{vsm}$ production as a function of NPY produced from baseline showing minor changes in rate for large increases in production in anesthetised vs awake conditions. (bottom) Change in NPY$_\mathrm{vsm}$ over time for anesthetised and awake stimulation. This figure matches the subfigures B-C-D of Figure $5$ in the primary publication and can be reproduced using \texttt{Figure5.m} file.}
     \label{fig:3}
 \end{figure}
 
-The last reproduced figure is Figure $6$ of the primary publication shown in Figure~\ref{fig:4}. This figure shows the difference in all state variables of the GABAergic NO and NPY pathways for awake and anaesthetised conditions, highlighting that the prolonged undershoot of the anaesthetic response is due to the Michalis-Menten kinetics of NPY$_\mathrm{vsm}$. It also shows the impact of NO and its initial vasodilatory effect. For a complete interpretation and all acronyms, see the primary publication. All sub-plots agree with the primary publication. 
+The last reproduced figure is Figure $6$ of the primary publication shown in \autoref{fig:4}. This figure shows the difference in all state variables of the GABAergic NO and NPY pathways for awake and anaesthetised conditions, highlighting that the prolonged undershoot of the anaesthetic response is due to the Michalis-Menten kinetics of NPY$_\mathrm{vsm}$. It also shows the impact of NO and its initial vasodilatory effect. For a complete interpretation and all acronyms, see the primary publication. All sub-plots agree with the primary publication. 
 
 \begin{figure}[hbtp]
     \centering
     \includegraphics[scale=0.9, keepaspectratio]{Figure6.png}
-    \caption{Complete presentation of the NO and NPY state variables for optogenetic stimulation of GABAergic interneurons in awake (red) and anesthetised (black) mice. This figure matches Figure $6$ in the primary publication and can be reproduced using Figure6.m file.}
+    \caption{Complete presentation of the NO and NPY state variables for optogenetic stimulation of GABAergic interneurons in awake (red) and anesthetised (black) mice. This figure matches Figure $6$ in the primary publication and can be reproduced using \texttt{Figure6.m} file.}
     \label{fig:4}
 \end{figure}
 
