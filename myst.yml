@@ -33,6 +33,24 @@ project:
         - Auckland Bioengineering Institute, University of Auckland, New Zealand
       corresponding: true
       email: soroush.safaei@auckland.ac.nz
+  editors:
+    - name: Leyla Noroozbabaee
+      orcid: 0000-0003-0416-1541
+      role: Editor
+      affiliations:
+        - Auckland Bioengineering Institute, University of Auckland, New Zealand
+    - name: David P. Nickerson
+      orcid: 0000-0003-4667-9779
+      role: Curator
+      affiliations:
+        - Auckland Bioengineering Institute, University of Auckland,New Zealand
+  history:
+    - date: 2022/09/14
+      type: submitted
+    - date: 2022/12/12
+      type: accepted
+    - date: 2023/01/11
+      type: published
   keywords:
     - CellML
     - neurovascular coupling
