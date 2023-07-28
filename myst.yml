@@ -75,10 +75,6 @@ site:
   title: >-
     Reproducibility Study for a Computational Model of the Neurovascular
     Coupling Unit
-  projects:
-    - slug: S000020
-      path: .
-  nav: []
   actions:
     - title: paper
       url: Dempsey2022PhysiomeS000020.pdf
@@ -88,3 +84,5 @@ site:
       static: true
     - title: primary
       url: https://doi.org/10.1016/j.neuroimage.2020.116827
+  domains:
+    - physiome-S000020.curve.space
